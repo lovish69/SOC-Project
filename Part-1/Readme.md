@@ -168,7 +168,7 @@ How to Install Silver on Ubuntu?
     make
     -Start Silver C2:
     ./sliver-server
-In part 2 we will go deeper with the help of Command and Control tool silver and will detect some logs with help of LimaCharlie and SysMOn.    
+'''In part 2 we will go deeper with the help of Command and Control tool silver and will detect some logs with help of LimaCharlie and SysMOn.'''    
     
     
 
