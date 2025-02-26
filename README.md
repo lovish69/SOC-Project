@@ -23,6 +23,7 @@ This project is a Security Operations Center (SOC) simulation, where I set up a 
 | **Forensics & Detection** |  Regedit |
 
 📂 Project Structure
+
 🔹 Part 1: Setting Up the SOC Lab
 
 ✅ Installed Ubuntu Attacker Machine & Windows 11 Victim Machine.
@@ -32,6 +33,7 @@ This project is a Security Operations Center (SOC) simulation, where I set up a 
 ✅ Installed Sysmon to collect detailed event logs.
 
 ✅ Installed LimaCharlie (EDR) to monitor endpoint activity.
+
 
 🔹 Part 2: Establishing Command & Control (C2)
 
@@ -44,6 +46,7 @@ This project is a Security Operations Center (SOC) simulation, where I set up a 
 ✅ Interacted with Windows using Sliver’s implants (process list, privilege escalation).
 
 ✅ Observed real-time detections in LimaCharlie EDR.
+
 
 🔹 Part 3: Advanced Threat Simulation & Log Analysis
 ✅ Attacking on victim machine with sliver
