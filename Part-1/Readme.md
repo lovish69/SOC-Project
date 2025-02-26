@@ -91,11 +91,36 @@ Choose the x86-64 (.exe) sensor.
 ![Screenshot (651)](https://github.com/user-attachments/assets/2987fbe3-bf25-4cec-8732-5fbd8973263d)
 Download the LimaCharlie Sensor on Windows VM
 
-Open PowerShell as Administrator and run the following commands:
-cd C:\Users\User\Downloads
-Invoke-WebRequest -Uri https://downloads.limacharlie.io/sensor/windows/64 -Outfile C:\Users\User\Downloads\lc_sensor.exe
+      Open PowerShell as Administrator and run the following commands:
+      cd C:\Users\User\Downloads
+      Invoke-WebRequest -Uri https://downloads.limacharlie.io/sensor/windows/64 -Outfile C:\Users\User\Downloads\lc_sensor.exe
+📌 This downloads the LimaCharlie agent to the Downloads folder.
+Install LimaCharlie Sensor
 
+    Copy the installation command from LimaCharlie UI (this contains your unique installation key).
+    Paste the command into your PowerShell terminal and execute it.
+![Key](https://github.com/user-attachments/assets/a69014af-150e-46f5-bc3d-db4a42e99648)
+📌 Expected Output:
+After running the command, the sensor should install successfully.
+![output](https://github.com/user-attachments/assets/36281f9f-153d-4b36-86fc-0273367eb4a1)
+Once installation is complete, go to the LimaCharlie UI.
+You should see a new machine detected.
+Click Finish to complete the setup.
 
+Configure LimaCharlie to Ship Sysmon Event Logs
+
+Now, we will configure LimaCharlie to also collect Sysmon event logs alongside its EDR telemetry.
+
+    In the left-side menu, click "Artifact Collection".
+    Next to "Artifact Collection Rules", click "Add Rule".
+    Configure the following settings:
+        Name: windows-sysmon-logs
+        Platforms: Windows
+        Path Pattern:
+        wel://Microsoft-Windows-Sysmon/Operational:*
+Click "Save Rule".
+LimaCharlie is now installed and configured to collect Sysmon logs.
+    
 4️⃣ Installing Sysmon on Windows VM
 What is Sysmon?
 
@@ -128,6 +153,22 @@ How to Install Sysmon?
 
 Silver is a Command & Control (C2) Framework used for red teaming and adversary simulation.
 How to Install Silver on Ubuntu?
+
+
+    -SSH into Ubuntu from Windows:
+    ssh user@<Ubuntu-IP>
+    -Install dependencies:
+    sudo apt update && sudo apt install -y golang git
+    -Clone the Silver repo:
+    git clone https://github.com/BishopFox/sliver.git
+    Build the Silver framework:
+    -cd sliver
+    make
+    -Start Silver C2:
+    ./sliver-server
+In part 2 we will go deeper with the help of Command and Control tool silver and will detect some logs with help of LimaCharlie and SysMOn.    
+    
+    
 
 
 
