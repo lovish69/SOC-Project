@@ -1,6 +1,7 @@
 SOC Project - Security Operations Center (SOC) Simulation
 
 📌 Overview
+
 This project is a Security Operations Center (SOC) simulation, where I set up a Windows victim machine and a Linux attacker machine to analyze security logs, detect threats, and simulate adversary tactics.
 
 🔹 Key Objectives:
