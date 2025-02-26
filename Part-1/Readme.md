@@ -133,18 +133,18 @@ Sysmon (System Monitor) is a Windows logging tool that provides detailed logs on
 How to Install Sysmon?
 
     Open PowerShell as Administrator
-    Download Sysmon:
+    -Download Sysmon:
     Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFile C:\Windows\Temp\Sysmon.zip
-    Unzip Sysmon:
+    -Unzip Sysmon:
     Expand-Archive -LiteralPath C:\Windows\Temp\Sysmon.zip -DestinationPath C:\Windows\Temp\Sysmon
-    Download Sysmon Configuration:
+    -Download Sysmon Configuration:
     Invoke-WebRequest -Uri https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml -OutFile 
     C:\Windows\Temp\Sysmon\sysmonconfig.xml
-    Install Sysmon with the config:
+    -Install Sysmon with the config:
     C:\Windows\Temp\Sysmon\Sysmon64.exe -accepteula -i C:\Windows\Temp\Sysmon\sysmonconfig.xml
-    Verify Sysmon is running:
+    -Verify Sysmon is running:
     Get-Service Sysmon64
-    Check if Sysmon is logging:
+    -Check if Sysmon is logging:
     Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 10
 
 ![sysmon](https://github.com/user-attachments/assets/370e02fb-65d7-43e9-aac7-e52ddd76425d)
