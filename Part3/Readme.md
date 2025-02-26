@@ -46,7 +46,8 @@ detect:
 ```
 What happens now?
 
+```plaintext
 ✅ LimaCharlie detects the attack before execution.
 ✅ The block action prevents the Ubuntu machine from running the command again.
 ✅ The alert is logged for incident response.
-    
+```    
