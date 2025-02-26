@@ -100,9 +100,11 @@ Install LimaCharlie Sensor
     Copy the installation command from LimaCharlie UI (this contains your unique installation key).
     Paste the command into your PowerShell terminal and execute it.
 ![Key](https://github.com/user-attachments/assets/a69014af-150e-46f5-bc3d-db4a42e99648)
+
 📌 Expected Output:
 After running the command, the sensor should install successfully.
 ![output](https://github.com/user-attachments/assets/36281f9f-153d-4b36-86fc-0273367eb4a1)
+
 Once installation is complete, go to the LimaCharlie UI.
 You should see a new machine detected.
 Click Finish to complete the setup.
