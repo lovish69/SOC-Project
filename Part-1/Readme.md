@@ -82,38 +82,19 @@ How to Install LimaCharlie on Windows?
     Go to Add Sensor → Select Windows.
 ![Screenshot (651)](https://github.com/user-attachments/assets/2987fbe3-bf25-4cec-8732-5fbd8973263d)
 
-a)Select Windows
-b)Provide a description such as: Windows VM - Lab
-c)Click Create
-d)Select the Installation Key we just created
-e)Specify the x86-64 (.exe) sensor, but then skip ahead to my instructions versus the ones provided.
+Select Windows as the operating system.
+Provide a description (e.g., Windows VM - Lab).
+Click "Create".
+Select the Installation Key created.
+Choose the x86-64 (.exe) sensor.
+📌 Do not follow LimaCharlie's default instructions. Use the commands below instead.
+![Screenshot (651)](https://github.com/user-attachments/assets/2987fbe3-bf25-4cec-8732-5fbd8973263d)
+Download the LimaCharlie Sensor on Windows VM
 
-![Sensor](https://github.com/user-attachments/assets/94b3cf5f-1277-46ea-8088-4f2aa1153ddf)
+Open PowerShell as Administrator and run the following commands:
+cd C:\Users\User\Downloads
+Invoke-WebRequest -Uri https://downloads.limacharlie.io/sensor/windows/64 -Outfile C:\Users\User\Downloads\lc_sensor.exe
 
-IN THE WINDOWS VM, open an Administrative PowerShell prompt and paste the following commands:
-cd ~/Downloads
-wget -O C:\Users\User\Downloads\lc_sensor.exe https://downloads.limacharlie.io/sensor/windows/64
-
-Next, we will copy the install command provided by LimaCharlie which contains the installation key. Paste this command into your open terminal.
-
-![Key](https://github.com/user-attachments/assets/a69014af-150e-46f5-bc3d-db4a42e99648)
-
-This is the expected output
-
-![output](https://github.com/user-attachments/assets/36281f9f-153d-4b36-86fc-0273367eb4a1)
-After this in the LimaCharlie UI interface you will see a machine is detected and click on finish  and follow the next step
-
-Now let’s configure LimaCharlie to also ship the Sysmon event logs alongside its own EDR telemetry
-
-a)In the left-side menu, click “Artifact Collection”
-b)Next to “Artifact Collection Rules” click “Add Rule”
-c)Name: windows-sysmon-logs
-d)Platforms: Windows
-e)Path Pattern: wel://Microsoft-Windows-Sysmon/Operational:*
-f)Retention Period: 10
-g)Click “Save Rule”
-
-LimaCharlie will now start shipping Sysmon logs which provide a wealth of EDR-like telemetry, some of which is redundant to LC’s own telemetry, but Sysmon is still a very power visibility tool that runs well alongside any EDR agent.
 
 4️⃣ Installing Sysmon on Windows VM
 What is Sysmon?
@@ -125,9 +106,9 @@ Sysmon (System Monitor) is a Windows logging tool that provides detailed logs on
 How to Install Sysmon?
 
     Open PowerShell as Administrator
-Download Sysmon:
+    Download Sysmon:
     Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -OutFile C:\Windows\Temp\Sysmon.zip
-Unzip Sysmon:
+    Unzip Sysmon:
     Expand-Archive -LiteralPath C:\Windows\Temp\Sysmon.zip -DestinationPath C:\Windows\Temp\Sysmon
     Download Sysmon Configuration:
     Invoke-WebRequest -Uri https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml -OutFile 
