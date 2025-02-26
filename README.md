@@ -7,8 +7,11 @@ This project is a Security Operations Center (SOC) simulation, where I set up a 
 🔹 Key Objectives:
 
 ✅ Learn SOC fundamentals and security monitoring.
+
 ✅ Set up a Windows & Linux lab environment.
+
 ✅ Use Sysmon, LimaCharlie (EDR), and Sliver (C2) for threat detection.
+
 ✅ Perform malware simulations and analyze detections.
 
 | Category          | Tools Used |
@@ -23,19 +26,28 @@ This project is a Security Operations Center (SOC) simulation, where I set up a 
 🔹 Part 1: Setting Up the SOC Lab
 
 ✅ Installed Ubuntu Attacker Machine & Windows 11 Victim Machine.
+
 ✅ Disabled Windows Defender & Security Services (via Registry & GPO).
+
 ✅ Installed Sysmon to collect detailed event logs.
+
 ✅ Installed LimaCharlie (EDR) to monitor endpoint activity.
 
 🔹 Part 2: Establishing Command & Control (C2)
 
 ✅ Set up Sliver C2 Framework on Ubuntu.
+
 ✅ Generated a malicious payload and transferred it to Windows.
+
 ✅ Executed the payload and established a C2 connection.
+
 ✅ Interacted with Windows using Sliver’s implants (process list, privilege escalation).
+
 ✅ Observed real-time detections in LimaCharlie EDR.
 
 🔹 Part 3: Advanced Threat Simulation & Log Analysis
 ✅ Attacking on victim machine with sliver
+
 ✅ Taking on credentials
+
 ✅ detection 
