@@ -7,4 +7,8 @@ This project is based on Security Operation Center(SOC) simulation home lab wher
 -Understand how SIEM, Sysmon, and EDR tools  work
 -Perfrom threat detection and analysis
 
+```bash
 
+lovish
+
+``` 
