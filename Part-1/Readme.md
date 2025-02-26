@@ -151,9 +151,9 @@ How to Install Sysmon?
 
 ![Event](https://github.com/user-attachments/assets/45c88ade-1b74-44c3-b4fb-9ca653af3506)
 
-5️⃣ Installing Silver C2 Framework
+5️⃣ Installing Sliver C2 Framework
 
-Silver is a Command & Control (C2) Framework used for red teaming and adversary simulation.
+Sliver is a Command & Control (C2) Framework used for red teaming and adversary simulation.
 How to Install Silver on Ubuntu?
 
 
@@ -161,12 +161,12 @@ How to Install Silver on Ubuntu?
     ssh user@<Ubuntu-IP>
     -Install dependencies:
     sudo apt update && sudo apt install -y golang git
-    -Clone the Silver repo:
+    -Clone the Sliver repo:
     git clone https://github.com/BishopFox/sliver.git
-    Build the Silver framework:
+    Build the Sliver framework:
     -cd sliver
     make
-    -Start Silver C2:
+    -Start Sliver C2:
     ./sliver-server
 '''In part 2 we will go deeper with the help of Command and Control tool silver and will detect some logs with help of LimaCharlie and SysMOn.'''    
     
